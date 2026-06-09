@@ -1,0 +1,33 @@
+# Future Body Fit Robots.txt
+# https://futurebodyfit.com
+
+# Allow all crawlers for public pages
+User-agent: Googlebot
+Allow: /
+Disallow: /dashboard
+Disallow: /nutrition
+Disallow: /onboarding
+Disallow: /transformation
+
+User-agent: Bingbot
+Allow: /
+Disallow: /dashboard
+Disallow: /nutrition
+Disallow: /onboarding
+Disallow: /transformation
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /nutrition
+Disallow: /onboarding
+Disallow: /transformation
+
+# Sitemap location
+Sitemap: https://futurebodyfit.com/sitemap.xml

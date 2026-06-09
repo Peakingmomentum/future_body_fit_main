@@ -1,0 +1,765 @@
+{
+  "workouts": [
+
+    {
+      "id": "wb-001",
+      "title": "Full Body Power Session",
+      "type": "Full Body",
+      "equipment": "Full Gym",
+      "level": "High School",
+      "goal": "Strength & Power",
+      "duration": 60,
+      "intensity": "High",
+      "coachNote": "Every rep is a deposit into your future. Stay locked in, control your breathing, and attack each set.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "5 exercises · 10 min",
+          "exercises": [
+            { "name": "Jump Rope", "sets": "3", "reps": "60s", "rest": "20s", "note": "Stay on your toes — light feet build fast feet." },
+            { "name": "Hip Circle Rotations", "sets": "2", "reps": "10 each side", "rest": "15s", "note": "Open the hips before any loaded movement." },
+            { "name": "Arm Circles", "sets": "2", "reps": "15 each direction", "rest": "10s", "note": "Loosen the shoulders — big circles down to small." },
+            { "name": "Bodyweight Squat", "sets": "2", "reps": "15", "rest": "20s", "note": "Sit back, chest up, knees track over toes." },
+            { "name": "Inchworm to Push-Up", "sets": "2", "reps": "8", "rest": "20s", "note": "Slow and controlled — activate the full chain." }
+          ]
+        },
+        {
+          "name": "Main Block A — Lower Body",
+          "tag": "3 exercises · 20 min",
+          "exercises": [
+            { "name": "Barbell Back Squat", "sets": "4", "reps": "6-8", "rest": "90s", "note": "Drive through the floor — power starts from the ground up." },
+            { "name": "Romanian Deadlift", "sets": "3", "reps": "8-10", "rest": "75s", "note": "Hinge at the hips, soft knee, feel the hamstring load." },
+            { "name": "Walking Lunges", "sets": "3", "reps": "12 each leg", "rest": "60s", "note": "Stay tall, big stride, drive the knee forward." }
+          ]
+        },
+        {
+          "name": "Main Block B — Upper Body",
+          "tag": "3 exercises · 20 min",
+          "exercises": [
+            { "name": "Barbell Bench Press", "sets": "4", "reps": "6-8", "rest": "90s", "note": "Control the descent — explosive press, not a drop and bounce." },
+            { "name": "Bent-Over Barbell Row", "sets": "3", "reps": "8-10", "rest": "75s", "note": "Pull with your elbows, not your hands." },
+            { "name": "Dumbbell Shoulder Press", "sets": "3", "reps": "10-12", "rest": "60s", "note": "Neutral grip option reduces shoulder stress." }
+          ]
+        },
+        {
+          "name": "Finisher",
+          "tag": "2 exercises · 8 min",
+          "exercises": [
+            { "name": "Farmer Carry", "sets": "3", "reps": "40 yards", "rest": "45s", "note": "Grip strength is total body strength — carry heavy, walk tall." },
+            { "name": "Plank Hold", "sets": "3", "reps": "45s", "rest": "30s", "note": "Brace your core — stay rigid from head to toe." }
+          ]
+        },
+        {
+          "name": "Cool-Down",
+          "tag": "5 min",
+          "exercises": [
+            { "name": "Child's Pose", "sets": "1", "reps": "60s", "rest": "0", "note": "Breathe deep, decompress the spine." },
+            { "name": "Figure 4 Hip Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Release the glutes and piriformis." },
+            { "name": "Doorway Chest Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Open the chest — counteract all that pressing." }
+          ]
+        }
+      ],
+      "closingNote": "Consistent work beats talent that doesn't show up. Stack these sessions and watch everything elevate."
+    },
+
+    {
+      "id": "wb-002",
+      "title": "No Equipment Bodyweight Grinder",
+      "type": "Full Body",
+      "equipment": "Bodyweight Only",
+      "level": "High School",
+      "goal": "Conditioning & Fat Loss",
+      "duration": 45,
+      "intensity": "High",
+      "coachNote": "No gym? No excuse. Your body is the machine. Let's work.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "4 exercises · 8 min",
+          "exercises": [
+            { "name": "High Knees", "sets": "3", "reps": "30s", "rest": "15s", "note": "Drive those knees up — simulate sprint mechanics." },
+            { "name": "Leg Swings", "sets": "2", "reps": "10 each leg", "rest": "10s", "note": "Front-to-back and side-to-side." },
+            { "name": "Arm Crossover Stretch", "sets": "2", "reps": "10 each arm", "rest": "10s", "note": "Keep the shoulder mobile and healthy." },
+            { "name": "Jumping Jacks", "sets": "2", "reps": "30s", "rest": "15s", "note": "Get the heart rate climbing gradually." }
+          ]
+        },
+        {
+          "name": "Circuit 1 — Power",
+          "tag": "4 exercises · 3 rounds · 15 min",
+          "exercises": [
+            { "name": "Jump Squats", "sets": "3", "reps": "15", "rest": "30s", "note": "Land soft — absorb force through your hips, not your knees." },
+            { "name": "Explosive Push-Ups", "sets": "3", "reps": "10", "rest": "30s", "note": "Push the floor away hard — train your fast-twitch fibers." },
+            { "name": "Broad Jump", "sets": "3", "reps": "8", "rest": "30s", "note": "Max distance each jump — reset your stance every rep." },
+            { "name": "Mountain Climbers", "sets": "3", "reps": "30s", "rest": "20s", "note": "Drive the knees, stay flat in the hips." }
+          ]
+        },
+        {
+          "name": "Circuit 2 — Endurance",
+          "tag": "4 exercises · 3 rounds · 15 min",
+          "exercises": [
+            { "name": "Burpees", "sets": "3", "reps": "12", "rest": "30s", "note": "Chest to ground, full extension at the top." },
+            { "name": "Reverse Lunges", "sets": "3", "reps": "12 each leg", "rest": "30s", "note": "Step back, drop straight down — control the movement." },
+            { "name": "Pike Push-Ups", "sets": "3", "reps": "10", "rest": "30s", "note": "Builds overhead pressing strength without equipment." },
+            { "name": "Bear Crawl", "sets": "3", "reps": "20 yards", "rest": "30s", "note": "Opposite hand and knee move together — stay low." }
+          ]
+        },
+        {
+          "name": "Cool-Down",
+          "tag": "5 min",
+          "exercises": [
+            { "name": "Standing Quad Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Balance on one leg — stability training built right in." },
+            { "name": "Seated Hamstring Stretch", "sets": "1", "reps": "60s each side", "rest": "0", "note": "Flex your foot to deepen the stretch." },
+            { "name": "Thread-the-Needle Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Opens the thoracic spine — important for all athletes." }
+          ]
+        }
+      ],
+      "closingNote": "Work ethic is the one thing nobody can take from you. Great session today."
+    },
+
+    {
+      "id": "wb-003",
+      "title": "Dumbbell Strength Builder",
+      "type": "Full Body",
+      "equipment": "Dumbbells Only",
+      "level": "Middle School",
+      "goal": "Strength & Power",
+      "duration": 45,
+      "intensity": "Moderate",
+      "coachNote": "Master the basics with dumbbells first. Form now equals power later.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "5 min",
+          "exercises": [
+            { "name": "March in Place", "sets": "2", "reps": "30s", "rest": "10s", "note": "Get the blood moving, stay loose." },
+            { "name": "World's Greatest Stretch", "sets": "2", "reps": "5 each side", "rest": "15s", "note": "Hip flexor, thoracic rotation, and hamstring all in one." },
+            { "name": "Unloaded Good Morning", "sets": "2", "reps": "10", "rest": "15s", "note": "Teach the hinge pattern before you load it." }
+          ]
+        },
+        {
+          "name": "Main Lifts",
+          "tag": "5 exercises · 30 min",
+          "exercises": [
+            { "name": "Dumbbell Goblet Squat", "sets": "4", "reps": "10-12", "rest": "60s", "note": "Hold the DB at your chest, elbows up, sit deep." },
+            { "name": "Dumbbell Romanian Deadlift", "sets": "3", "reps": "10", "rest": "60s", "note": "Keep the DBs close to your legs — feel the hamstrings load." },
+            { "name": "Dumbbell Push Press", "sets": "3", "reps": "8-10", "rest": "60s", "note": "Slight dip and drive — teaches power transfer from legs to arms." },
+            { "name": "Dumbbell Bent-Over Row", "sets": "3", "reps": "10 each arm", "rest": "45s", "note": "Row to your hip, not your shoulder — full lat engagement." },
+            { "name": "Dumbbell Reverse Lunge", "sets": "3", "reps": "10 each leg", "rest": "45s", "note": "Control the step back, drive forward to stand." }
+          ]
+        },
+        {
+          "name": "Core Finisher",
+          "tag": "3 exercises · 8 min",
+          "exercises": [
+            { "name": "Dumbbell Suitcase Carry", "sets": "3", "reps": "30 yards each side", "rest": "30s", "note": "One DB, stay square — builds core anti-lateral stability." },
+            { "name": "Dead Bug", "sets": "3", "reps": "8 each side", "rest": "30s", "note": "Lower back stays flat on the ground the entire time." },
+            { "name": "Hollow Body Hold", "sets": "3", "reps": "30s", "rest": "20s", "note": "Arms overhead, lower back pressed down — feel the tension." }
+          ]
+        }
+      ],
+      "closingNote": "Every elite athlete started with the basics. Respect the process and the results will come."
+    },
+
+    {
+      "id": "wb-004",
+      "title": "Upper Body Strength Day",
+      "type": "Upper Body",
+      "equipment": "Full Gym",
+      "level": "College",
+      "goal": "Strength & Power",
+      "duration": 60,
+      "intensity": "High",
+      "coachNote": "Upper body strength powers every sport — throwing, swinging, grappling, pushing off defenders. Build it right.",
+      "sections": [
+        {
+          "name": "Shoulder Warm-Up",
+          "tag": "8 min",
+          "exercises": [
+            { "name": "Cable Face Pull", "sets": "3", "reps": "15", "rest": "30s", "note": "Shoulder health essential — do this before every upper body session." },
+            { "name": "Band Pull-Apart", "sets": "3", "reps": "20", "rest": "20s", "note": "Retract the scapula fully on every rep." },
+            { "name": "Foam Roller Thoracic Extension", "sets": "2", "reps": "8 each segment", "rest": "15s", "note": "Open up the mid-back for better pressing and pulling posture." }
+          ]
+        },
+        {
+          "name": "Pressing Block",
+          "tag": "3 exercises · 20 min",
+          "exercises": [
+            { "name": "Incline Barbell Press", "sets": "4", "reps": "5-6", "rest": "90s", "note": "Upper chest power. Control the eccentric — 3 seconds down." },
+            { "name": "Dumbbell Neutral Grip Flat Press", "sets": "3", "reps": "8-10", "rest": "75s", "note": "Neutral grip reduces shoulder stress. Full stretch at the bottom." },
+            { "name": "Cable Chest Fly", "sets": "3", "reps": "12-15", "rest": "45s", "note": "Feel the squeeze across the chest. Slight bend in the elbow always." }
+          ]
+        },
+        {
+          "name": "Pulling Block",
+          "tag": "3 exercises · 20 min",
+          "exercises": [
+            { "name": "Weighted Pull-Ups", "sets": "4", "reps": "5-6", "rest": "90s", "note": "Dead hang start, chin over bar, full extension at the bottom." },
+            { "name": "Seated Cable Row (Close Grip)", "sets": "3", "reps": "10-12", "rest": "60s", "note": "Row to the sternum, elbows tight to your sides." },
+            { "name": "Single-Arm Dumbbell Row", "sets": "3", "reps": "8-10 each", "rest": "45s", "note": "Brace your core hard — don't rotate the torso to cheat the rep." }
+          ]
+        },
+        {
+          "name": "Accessory Work",
+          "tag": "4 exercises · 10 min",
+          "exercises": [
+            { "name": "Lateral Raises", "sets": "3", "reps": "15", "rest": "30s", "note": "Light weight, perfect form. Lead with the elbow." },
+            { "name": "EZ-Bar Curl", "sets": "3", "reps": "10-12", "rest": "30s", "note": "Full range of motion — don't cut the top short." },
+            { "name": "Tricep Rope Pushdown", "sets": "3", "reps": "12-15", "rest": "30s", "note": "Spread the rope at the bottom — full tricep extension." },
+            { "name": "External Rotation (Cable or Band)", "sets": "3", "reps": "15 each arm", "rest": "20s", "note": "Rotator cuff health. Light resistance, perfect form always." }
+          ]
+        }
+      ],
+      "closingNote": "Strong upper body is a competitive advantage in every sport. You built it today."
+    },
+
+    {
+      "id": "wb-005",
+      "title": "Lower Body Explosion",
+      "type": "Lower Body",
+      "equipment": "Full Gym",
+      "level": "High School",
+      "goal": "Athletic Performance & Explosiveness",
+      "duration": 55,
+      "intensity": "High",
+      "coachNote": "Every jump, sprint, cut, and change of direction starts from your legs. Build that foundation.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "8 min",
+          "exercises": [
+            { "name": "Leg Swing (Forward & Lateral)", "sets": "2", "reps": "10 each direction each leg", "rest": "15s", "note": "Hold a wall for balance, keep the swing controlled." },
+            { "name": "Hip 90/90 Stretch", "sets": "2", "reps": "45s each side", "rest": "10s", "note": "Internal and external hip rotation — critical for all athletes." },
+            { "name": "Glute Bridge", "sets": "3", "reps": "15", "rest": "20s", "note": "Squeeze at the top for 2 seconds. Activate before you load." },
+            { "name": "Lateral Band Walk", "sets": "2", "reps": "15 steps each way", "rest": "20s", "note": "Tension stays on the band the whole time." }
+          ]
+        },
+        {
+          "name": "Power Block",
+          "tag": "2 exercises · 15 min",
+          "exercises": [
+            { "name": "Box Jump", "sets": "4", "reps": "5", "rest": "75s", "note": "Full effort every rep. Land soft and absorb. Step down — don't jump down." },
+            { "name": "Hang Power Clean", "sets": "4", "reps": "4", "rest": "90s", "note": "Triple extension — ankle, knee, hip. Explosive hip drive is the whole point." }
+          ]
+        },
+        {
+          "name": "Strength Block",
+          "tag": "3 exercises · 20 min",
+          "exercises": [
+            { "name": "Front Squat", "sets": "4", "reps": "6-8", "rest": "90s", "note": "Elbows high, upright torso. Front squat forces better posture." },
+            { "name": "Bulgarian Split Squat", "sets": "3", "reps": "8 each leg", "rest": "75s", "note": "The most valuable single-leg exercise for athletes. Demanding but essential." },
+            { "name": "Leg Press", "sets": "3", "reps": "12-15", "rest": "60s", "note": "Full range, feet shoulder-width. Don't lock out the knees at the top." }
+          ]
+        },
+        {
+          "name": "Posterior Chain",
+          "tag": "2 exercises · 10 min",
+          "exercises": [
+            { "name": "Nordic Hamstring Curl", "sets": "3", "reps": "5-8", "rest": "75s", "note": "Top hamstring injury prevention drill. Slow eccentric — catch with your hands." },
+            { "name": "Barbell Hip Thrust", "sets": "3", "reps": "10-12", "rest": "60s", "note": "Glute power is sprint power. Drive straight up, hold 1 second at the top." }
+          ]
+        }
+      ],
+      "closingNote": "Your legs are your engine. You just made them stronger. Keep stacking sessions."
+    },
+
+    {
+      "id": "wb-006",
+      "title": "Core & Stability Training",
+      "type": "Core & Abs",
+      "equipment": "Bodyweight Only",
+      "level": "High School",
+      "goal": "Athletic Performance",
+      "duration": 30,
+      "intensity": "Moderate",
+      "coachNote": "Core training for athletes isn't about looks. It's about transferring power, protecting your spine, and staying strong under pressure.",
+      "sections": [
+        {
+          "name": "Activation",
+          "tag": "3 exercises · 5 min",
+          "exercises": [
+            { "name": "Diaphragmatic Breathing", "sets": "1", "reps": "10 deep breaths", "rest": "0", "note": "Belly rises on inhale. Learn to brace your core before any movement." },
+            { "name": "Dead Bug (Slow)", "sets": "3", "reps": "6 each side", "rest": "20s", "note": "Opposite arm and leg lower simultaneously. Back stays flat the entire time." },
+            { "name": "Cat-Cow", "sets": "2", "reps": "10", "rest": "15s", "note": "Breathe with each movement. Warm up the spine." }
+          ]
+        },
+        {
+          "name": "Anti-Rotation & Stability",
+          "tag": "4 exercises · 12 min",
+          "exercises": [
+            { "name": "Plank with Shoulder Tap", "sets": "3", "reps": "10 each side", "rest": "30s", "note": "Hips stay square. Resist the urge to rotate." },
+            { "name": "Side Plank", "sets": "3", "reps": "40s each side", "rest": "20s", "note": "Body in a straight line. Don't let the hips sag." },
+            { "name": "Pallof Press Hold (or Isometric)", "sets": "3", "reps": "10 each side", "rest": "30s", "note": "Best anti-rotation drill for athletic core strength." },
+            { "name": "Bird Dog", "sets": "3", "reps": "8 each side", "rest": "20s", "note": "Extend opposite arm and leg slowly. Hold 2 seconds at full extension." }
+          ]
+        },
+        {
+          "name": "Dynamic Core",
+          "tag": "3 exercises · 10 min",
+          "exercises": [
+            { "name": "V-Up", "sets": "3", "reps": "12", "rest": "30s", "note": "Simultaneous lift of arms and legs. Controlled, not swung." },
+            { "name": "Bicycle Crunch", "sets": "3", "reps": "20", "rest": "25s", "note": "Slow it down — feel the oblique on every twist." },
+            { "name": "Hollow Body Rocks", "sets": "3", "reps": "30s", "rest": "20s", "note": "Full body tension from head to toe. This is foundational core strength." }
+          ]
+        }
+      ],
+      "closingNote": "A strong core makes every athletic movement more efficient. This is the work that shows up when it matters most."
+    },
+
+    {
+      "id": "wb-007",
+      "title": "Speed & Agility Field Session",
+      "type": "Speed & Agility",
+      "equipment": "Field / Track",
+      "level": "High School",
+      "goal": "Speed Development",
+      "duration": 45,
+      "intensity": "High",
+      "coachNote": "Speed is a skill. Agility is a skill. Both can be trained and improved with the right work.",
+      "sections": [
+        {
+          "name": "Dynamic Warm-Up",
+          "tag": "10 min",
+          "exercises": [
+            { "name": "A-Skip", "sets": "2", "reps": "20 yards", "rest": "30s", "note": "Drive the knee, push the ground away with the opposite foot." },
+            { "name": "B-Skip", "sets": "2", "reps": "20 yards", "rest": "30s", "note": "A-Skip plus leg extension. Pawing motion — not a kick." },
+            { "name": "High Knees", "sets": "2", "reps": "20 yards", "rest": "30s", "note": "Arms drive hard. Rhythm and coordination are both being trained here." },
+            { "name": "Carioca", "sets": "2", "reps": "20 yards each way", "rest": "20s", "note": "Hips rotate, feet stay quick. Great for lateral hip mobility." },
+            { "name": "Backpedal", "sets": "2", "reps": "20 yards", "rest": "30s", "note": "Stay low, arms pump, weight forward on the balls of your feet." }
+          ]
+        },
+        {
+          "name": "Sprint Work",
+          "tag": "4 drills · 15 min",
+          "exercises": [
+            { "name": "10-Yard Accelerations", "sets": "6", "reps": "1", "rest": "45s", "note": "First 3 steps win the play. Stay low, push the ground back." },
+            { "name": "40-Yard Build-Up Sprint", "sets": "4", "reps": "1", "rest": "90s", "note": "Gradual acceleration — 50% to 75% to 100% over 40 yards." },
+            { "name": "Pro Agility (5-10-5)", "sets": "5", "reps": "1", "rest": "60s", "note": "Change of direction speed. Sink the hips on every cut." },
+            { "name": "L-Drill", "sets": "4", "reps": "1", "rest": "75s", "note": "Plant and cut. Your first step after the cut is everything." }
+          ]
+        },
+        {
+          "name": "Sport Movement Patterns",
+          "tag": "3 drills · 15 min",
+          "exercises": [
+            { "name": "Reactive Cone Drill", "sets": "5", "reps": "1", "rest": "45s", "note": "Coach points a direction — athlete reacts immediately. Trains reaction time." },
+            { "name": "Lateral Shuffle to Sprint", "sets": "5", "reps": "1", "rest": "45s", "note": "Shuffle 5 yards, plant, explode into a sprint. Simulates game cuts." },
+            { "name": "Cone Weave (Figure 8)", "sets": "5", "reps": "1", "rest": "30s", "note": "Body control and hip flexibility. Stay low through each gate." }
+          ]
+        }
+      ],
+      "closingNote": "Reps build trust in your feet. Every drill today made you a faster, more confident athlete."
+    },
+
+    {
+      "id": "wb-008",
+      "title": "Conditioning Gauntlet",
+      "type": "Conditioning & Cardio",
+      "equipment": "Field / Track",
+      "level": "High School",
+      "goal": "Conditioning & Fat Loss",
+      "duration": 40,
+      "intensity": "Elite",
+      "coachNote": "Championships are won in the 4th quarter. Train your lungs and your legs like they matter — because they do.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "5 min",
+          "exercises": [
+            { "name": "Easy Jog", "sets": "1", "reps": "400 meters", "rest": "0", "note": "Easy pace — just get loose and warm." },
+            { "name": "Dynamic Stretching Circuit", "sets": "1", "reps": "5 min", "rest": "0", "note": "Leg swings, hip circles, arm circles, trunk rotations." }
+          ]
+        },
+        {
+          "name": "Interval Block",
+          "tag": "6 rounds · 20 min",
+          "exercises": [
+            { "name": "100-Yard Sprint", "sets": "6", "reps": "1", "rest": "60s", "note": "All out. Time yourself. Track your improvement week to week." },
+            { "name": "10 Push-Ups (between sprints)", "sets": "6", "reps": "10", "rest": "0", "note": "Strength endurance. Do these immediately after each sprint." }
+          ]
+        },
+        {
+          "name": "Pyramid Run",
+          "tag": "1 set · 12 min",
+          "exercises": [
+            { "name": "Pyramid Distance Run", "sets": "1", "reps": "100 / 200 / 300 / 200 / 100 yards", "rest": "45s between each", "note": "Controlled effort — pace yourself up and back down the pyramid." }
+          ]
+        },
+        {
+          "name": "Cool-Down",
+          "tag": "5 min",
+          "exercises": [
+            { "name": "Walk Lap", "sets": "1", "reps": "400 meters", "rest": "0", "note": "Bring the heart rate down slow. Deep breathing throughout." },
+            { "name": "Calf Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Hold a wall, heel pressed to the ground." },
+            { "name": "Standing Hip Flexor Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Lunge position, reach the back arm overhead." }
+          ]
+        }
+      ],
+      "closingNote": "Most athletes quit this workout mentally before their body gives out. You finished. That's the difference."
+    },
+
+    {
+      "id": "wb-009",
+      "title": "Youth Athlete Foundations",
+      "type": "Full Body",
+      "equipment": "Bodyweight Only",
+      "level": "Youth",
+      "goal": "Athletic Performance",
+      "duration": 30,
+      "intensity": "Low",
+      "coachNote": "We're building athletes from the ground up. Every drill today makes you faster, stronger, and more coordinated.",
+      "sections": [
+        {
+          "name": "Warm-Up Games",
+          "tag": "8 min",
+          "exercises": [
+            { "name": "Jog in Place", "sets": "1", "reps": "2 min", "rest": "0", "note": "Stay light on your feet, arms moving naturally." },
+            { "name": "Animal Walks (Bear, Crab, Duck)", "sets": "2", "reps": "20 yards each", "rest": "15s", "note": "Fun and effective — builds coordination and body awareness." }
+          ]
+        },
+        {
+          "name": "Fundamental Movement",
+          "tag": "5 exercises · 15 min",
+          "exercises": [
+            { "name": "Bodyweight Squat", "sets": "3", "reps": "10", "rest": "20s", "note": "Feet shoulder-width, chest up, sit back like you're sitting in a chair." },
+            { "name": "Push-Up (or Knee Push-Up)", "sets": "3", "reps": "8-10", "rest": "20s", "note": "Straight line from head to knee — no saggy hips." },
+            { "name": "Broad Jump", "sets": "3", "reps": "5", "rest": "30s", "note": "Swing the arms, jump as far as possible, stick the landing." },
+            { "name": "Lateral Shuffle", "sets": "3", "reps": "10 yards each way", "rest": "20s", "note": "Stay low, don't cross your feet." },
+            { "name": "Plank Hold", "sets": "3", "reps": "20s", "rest": "15s", "note": "Straight body, tight tummy — hold it like a board." }
+          ]
+        },
+        {
+          "name": "Fun Finisher",
+          "tag": "5 min",
+          "exercises": [
+            { "name": "Sprint Relay", "sets": "4", "reps": "20 yards", "rest": "30s", "note": "Compete. Make it fun. Fast starts win." },
+            { "name": "Jump & Clap", "sets": "3", "reps": "10", "rest": "15s", "note": "Jump as high as possible, clap above your head at the top." }
+          ]
+        }
+      ],
+      "closingNote": "You worked hard today and that's something to be proud of. Same energy next session — let's keep building!"
+    },
+
+    {
+      "id": "wb-010",
+      "title": "Elite Athlete Performance Protocol",
+      "type": "Full Body",
+      "equipment": "Full Gym",
+      "level": "College",
+      "goal": "Athletic Performance & Explosiveness",
+      "duration": 70,
+      "intensity": "Elite",
+      "coachNote": "This session is built for athletes who want to play at the next level. Every movement has a purpose. Trust the process.",
+      "sections": [
+        {
+          "name": "Prehab & Mobility",
+          "tag": "Non-negotiable · 10 min",
+          "exercises": [
+            { "name": "Band Pull-Apart", "sets": "3", "reps": "20", "rest": "20s", "note": "Your joints are your career. Protect them every single session." },
+            { "name": "Cable External Rotation", "sets": "3", "reps": "15 each arm", "rest": "20s", "note": "Elbow at 90 degrees, rotate out slowly and controlled." },
+            { "name": "Prone Y-T-W on Bench", "sets": "2", "reps": "10 each position", "rest": "30s", "note": "Rear delt and rotator cuff strength. Light weight or bodyweight." },
+            { "name": "Foam Roller Thoracic Mobility", "sets": "2", "reps": "8 each segment", "rest": "20s", "note": "Open the mid-back — rotation and power transfer starts here." }
+          ]
+        },
+        {
+          "name": "Power & Explosiveness",
+          "tag": "3 exercises · 15 min",
+          "exercises": [
+            { "name": "Hang Power Clean", "sets": "5", "reps": "3", "rest": "90s", "note": "Triple extension is the key. This is functional athletic power." },
+            { "name": "Medicine Ball Rotational Slam", "sets": "4", "reps": "6 each side", "rest": "45s", "note": "Full hip rotation, violent core contraction, controlled slam." },
+            { "name": "Depth Drop to Sprint", "sets": "5", "reps": "1", "rest": "75s", "note": "Step off box, absorb the landing, explode forward immediately." }
+          ]
+        },
+        {
+          "name": "Strength Block",
+          "tag": "4 exercises · 20 min",
+          "exercises": [
+            { "name": "Trap Bar Deadlift", "sets": "4", "reps": "5", "rest": "90s", "note": "More athletic than conventional deadlift. Full body power builder." },
+            { "name": "Single-Leg Romanian Deadlift", "sets": "3", "reps": "8 each leg", "rest": "60s", "note": "Balance plus hamstring strength — mimics single-leg athletic demands." },
+            { "name": "Dumbbell Incline Press", "sets": "3", "reps": "8-10", "rest": "75s", "note": "Upper chest and shoulder power without excessive joint stress." },
+            { "name": "Half-Kneeling Single-Arm Cable Row", "sets": "3", "reps": "10 each side", "rest": "60s", "note": "Anti-rotation plus pulling strength — builds sport-specific stability." }
+          ]
+        },
+        {
+          "name": "Footwork & Movement",
+          "tag": "3 exercises · 12 min",
+          "exercises": [
+            { "name": "Ladder Drills (Ickey Shuffle, In-Out)", "sets": "4", "reps": "2 passes each pattern", "rest": "30s", "note": "Speed through the ladder — precision is the goal, not just pace." },
+            { "name": "Reactive Cone Change of Direction", "sets": "5", "reps": "1", "rest": "45s", "note": "Plant hard on the outside foot. First step out of the cut wins." },
+            { "name": "Hip Flexor Stretch", "sets": "1", "reps": "60s each side", "rest": "0", "note": "Tight hip flexors kill speed and power. Stretch these after every session." }
+          ]
+        },
+        {
+          "name": "Cool-Down",
+          "tag": "8 min",
+          "exercises": [
+            { "name": "PNF Hamstring Stretch", "sets": "2", "reps": "30s each leg", "rest": "0", "note": "Contract for 5 seconds, then relax into a deeper stretch." },
+            { "name": "Doorway Pec Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Counteract all the pressing work from the session." },
+            { "name": "Neck and Trap Release", "sets": "1", "reps": "60s total", "rest": "0", "note": "Slow and controlled side bends. Never force the neck." }
+          ]
+        }
+      ],
+      "closingNote": "You trained like a professional today. Consistency over time is what separates good from great."
+    },
+
+    {
+      "id": "wb-011",
+      "title": "Kettlebell Athletic Circuit",
+      "type": "Full Body",
+      "equipment": "Kettlebells",
+      "level": "High School",
+      "goal": "Athletic Performance & Explosiveness",
+      "duration": 45,
+      "intensity": "High",
+      "coachNote": "Kettlebells build functional athletic power. Every swing, press, and carry translates directly to sport performance.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "8 min",
+          "exercises": [
+            { "name": "Kettlebell Halo", "sets": "3", "reps": "8 each direction", "rest": "20s", "note": "Slow circles around the head. Loosens shoulders and thoracic spine." },
+            { "name": "KB Goblet Squat (light)", "sets": "3", "reps": "10", "rest": "20s", "note": "Perfect squat warm-up. Use this to groove the movement before loading." }
+          ]
+        },
+        {
+          "name": "Power Circuit",
+          "tag": "4 exercises · 4 rounds · 20 min",
+          "exercises": [
+            { "name": "Kettlebell Swing", "sets": "4", "reps": "15", "rest": "30s", "note": "Hip hinge and drive — this is a hip thrust, not a squat. Stay explosive." },
+            { "name": "KB Clean & Press", "sets": "4", "reps": "6 each arm", "rest": "45s", "note": "Clean to rack, press overhead. Full hip extension drives the clean." },
+            { "name": "KB Goblet Squat", "sets": "4", "reps": "10", "rest": "45s", "note": "Deep and controlled. Stay upright. Feel the full squat movement." },
+            { "name": "KB Single-Leg Deadlift", "sets": "4", "reps": "8 each leg", "rest": "45s", "note": "Balance plus posterior chain strength. Essential for all athletes." }
+          ]
+        },
+        {
+          "name": "Carry & Core Finisher",
+          "tag": "3 exercises · 10 min",
+          "exercises": [
+            { "name": "KB Overhead Waiter Carry", "sets": "3", "reps": "30 yards each arm", "rest": "30s", "note": "Shoulder stability under load. Stack the joint — ear, shoulder, hip, knee, ankle." },
+            { "name": "KB Windmill", "sets": "3", "reps": "5 each side", "rest": "30s", "note": "Lateral hip strength and oblique stability combined in one movement." },
+            { "name": "KB Turkish Get-Up", "sets": "2", "reps": "3 each side", "rest": "45s", "note": "Slow and deliberate. The ultimate full-body stability and coordination movement." }
+          ]
+        }
+      ],
+      "closingNote": "Kettlebell work makes you feel athletic because it IS athletic. Great work today."
+    },
+
+    {
+      "id": "wb-012",
+      "title": "Resistance Band Total Body",
+      "type": "Full Body",
+      "equipment": "Resistance Bands",
+      "level": "Middle School",
+      "goal": "Strength & Power",
+      "duration": 35,
+      "intensity": "Moderate",
+      "coachNote": "Bands are underrated tools. Constant tension throughout every movement means every inch of every rep counts.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "5 min",
+          "exercises": [
+            { "name": "Band Pull-Apart", "sets": "3", "reps": "15", "rest": "15s", "note": "Shoulder health first. Do this every session without exception." },
+            { "name": "Band Squat Walk", "sets": "2", "reps": "10 steps each way", "rest": "20s", "note": "Band around ankles, keep tension throughout, stay low." }
+          ]
+        },
+        {
+          "name": "Main Circuit",
+          "tag": "6 exercises · 3 rounds · 25 min",
+          "exercises": [
+            { "name": "Banded Squat", "sets": "3", "reps": "15", "rest": "30s", "note": "Band under feet, hold at shoulders. Adds resistance at the top of the movement." },
+            { "name": "Banded Push-Up", "sets": "3", "reps": "10-12", "rest": "30s", "note": "Band across your back held in both hands — harder at the lockout." },
+            { "name": "Banded Bent-Over Row", "sets": "3", "reps": "12 each arm", "rest": "30s", "note": "Stand on band, hinge over, row to the hip." },
+            { "name": "Banded Hip Thrust", "sets": "3", "reps": "15", "rest": "30s", "note": "Band across the hips, anchored down. Full glute squeeze at the top." },
+            { "name": "Banded Pallof Press", "sets": "3", "reps": "10 each side", "rest": "30s", "note": "Anchor to a fixed point. Press straight out and resist rotation." },
+            { "name": "Banded Lateral Walk", "sets": "3", "reps": "15 each way", "rest": "20s", "note": "Knees slightly bent, feet never fully together." }
+          ]
+        }
+      ],
+      "closingNote": "Simple tools, serious results. The band never lies — if you felt it burn, you put in the work."
+    },
+
+    {
+      "id": "wb-013",
+      "title": "Home Gym Strength Session",
+      "type": "Full Body",
+      "equipment": "Home Gym",
+      "level": "Adult",
+      "goal": "Strength & Power",
+      "duration": 50,
+      "intensity": "Moderate",
+      "coachNote": "You don't need a fancy facility. You need consistency and effort. Let's get after it.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "7 min",
+          "exercises": [
+            { "name": "Jumping Jacks", "sets": "2", "reps": "30s", "rest": "15s", "note": "Elevate the heart rate gradually." },
+            { "name": "Hip Circles", "sets": "2", "reps": "10 each side", "rest": "10s", "note": "Loosen the hip joint in all planes of motion." },
+            { "name": "Push-Up to Downward Dog", "sets": "2", "reps": "8", "rest": "15s", "note": "Full upper body and posterior chain prep in one movement." },
+            { "name": "Bodyweight Hip Hinge", "sets": "2", "reps": "10", "rest": "15s", "note": "Groove the hinge pattern before loading it." }
+          ]
+        },
+        {
+          "name": "Compound Movements",
+          "tag": "4 exercises · 25 min",
+          "exercises": [
+            { "name": "Dumbbell or Barbell Squat", "sets": "4", "reps": "10", "rest": "75s", "note": "Use whatever loading option you have. Depth and control matter most." },
+            { "name": "Push-Up Variation (weighted if possible)", "sets": "4", "reps": "12-15", "rest": "60s", "note": "Elevate feet for more difficulty or add a vest for load." },
+            { "name": "Dumbbell Deadlift", "sets": "4", "reps": "10", "rest": "75s", "note": "Hinge at the hips, keep the back flat, push the ground away." },
+            { "name": "Dumbbell Bent-Over Row", "sets": "3", "reps": "12 each arm", "rest": "60s", "note": "Control the movement in both directions — up and down." }
+          ]
+        },
+        {
+          "name": "Accessory & Core",
+          "tag": "4 exercises · 15 min",
+          "exercises": [
+            { "name": "Step-Up (using a chair or bench)", "sets": "3", "reps": "10 each leg", "rest": "45s", "note": "Drive through the heel of the elevated leg. Stay controlled." },
+            { "name": "Plank", "sets": "3", "reps": "45s", "rest": "30s", "note": "Squeeze everything. Glutes, abs, and quads all tight." },
+            { "name": "Dumbbell Lateral Raise", "sets": "3", "reps": "12", "rest": "30s", "note": "Lead with the elbow. Light weight and perfect form always wins." },
+            { "name": "Superman Hold", "sets": "3", "reps": "10 reps / 3s hold each", "rest": "30s", "note": "Builds lower back endurance and glute activation." }
+          ]
+        }
+      ],
+      "closingNote": "Every session at home is a session your competition might be skipping. You showed up. That matters."
+    },
+
+    {
+      "id": "wb-014",
+      "title": "Push Day — Chest Shoulders Triceps",
+      "type": "Upper Body",
+      "equipment": "Full Gym",
+      "level": "High School",
+      "goal": "Muscle Hypertrophy",
+      "duration": 55,
+      "intensity": "Moderate",
+      "coachNote": "Push sessions build the pressing power that translates to sport. Stay focused, feel every rep.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "8 min",
+          "exercises": [
+            { "name": "Band Pull-Apart", "sets": "3", "reps": "15", "rest": "20s", "note": "Activate the rear delts before all that pressing work." },
+            { "name": "Light Cable External Rotation", "sets": "2", "reps": "15 each arm", "rest": "15s", "note": "Warm up the rotator cuff — your shoulders will thank you." },
+            { "name": "Arm Circles", "sets": "2", "reps": "15 each direction", "rest": "10s", "note": "Big to small, forward and backward." }
+          ]
+        },
+        {
+          "name": "Chest",
+          "tag": "3 exercises · 20 min",
+          "exercises": [
+            { "name": "Barbell Flat Bench Press", "sets": "4", "reps": "8-10", "rest": "90s", "note": "Arch slightly, retract the scapula, drive the bar up and slightly back." },
+            { "name": "Incline Dumbbell Press", "sets": "3", "reps": "10-12", "rest": "75s", "note": "30-45 degree incline. Touch the dumbbells at the top on each rep." },
+            { "name": "Cable Fly (Low to High)", "sets": "3", "reps": "13-15", "rest": "45s", "note": "Arc the arms up like you're hugging a tree. Full chest stretch at the bottom." }
+          ]
+        },
+        {
+          "name": "Shoulders",
+          "tag": "3 exercises · 15 min",
+          "exercises": [
+            { "name": "Seated Dumbbell Shoulder Press", "sets": "3", "reps": "10-12", "rest": "75s", "note": "Full range — DBs at ear height at the bottom, touch lightly at the top." },
+            { "name": "Lateral Raise", "sets": "3", "reps": "15", "rest": "45s", "note": "Lead with the elbow, slight forward lean. No swinging." },
+            { "name": "Front Raise (alternating)", "sets": "3", "reps": "12 each arm", "rest": "45s", "note": "Control the descent — don't drop the weight back down." }
+          ]
+        },
+        {
+          "name": "Triceps",
+          "tag": "2 exercises · 10 min",
+          "exercises": [
+            { "name": "Skull Crusher (EZ Bar)", "sets": "3", "reps": "10-12", "rest": "60s", "note": "Lower the bar to your forehead slowly. Elbows stay locked in place." },
+            { "name": "Tricep Pushdown (Rope)", "sets": "3", "reps": "14-16", "rest": "45s", "note": "Spread the rope at the bottom. Full extension on every rep." }
+          ]
+        }
+      ],
+      "closingNote": "Your push session is done. Recover well, eat right, and come back stronger."
+    },
+
+    {
+      "id": "wb-015",
+      "title": "Pull Day — Back & Biceps",
+      "type": "Upper Body",
+      "equipment": "Full Gym",
+      "level": "High School",
+      "goal": "Muscle Hypertrophy",
+      "duration": 55,
+      "intensity": "Moderate",
+      "coachNote": "A strong back prevents injuries and builds the pulling power that matters in every sport.",
+      "sections": [
+        {
+          "name": "Warm-Up",
+          "tag": "8 min",
+          "exercises": [
+            { "name": "Lat Pulldown (light)", "sets": "3", "reps": "15", "rest": "20s", "note": "Feel the lats engage. This is warm-up, not working sets." },
+            { "name": "Band Pull-Apart", "sets": "3", "reps": "15", "rest": "15s", "note": "Always." },
+            { "name": "Cat-Cow", "sets": "2", "reps": "10", "rest": "10s", "note": "Mobilize the spine before heavy pulling." }
+          ]
+        },
+        {
+          "name": "Back",
+          "tag": "4 exercises · 25 min",
+          "exercises": [
+            { "name": "Pull-Ups (or Lat Pulldown)", "sets": "4", "reps": "6-8", "rest": "90s", "note": "Full range of motion. Dead hang at the bottom. Chin clears the bar." },
+            { "name": "Barbell Bent-Over Row", "sets": "4", "reps": "8-10", "rest": "75s", "note": "Hip hinge at 45 degrees. Row to the lower chest. Control the lower." },
+            { "name": "Seated Cable Row (Wide Grip)", "sets": "3", "reps": "10-12", "rest": "60s", "note": "Elbows flare out slightly — hits the upper back differently." },
+            { "name": "Straight-Arm Cable Pulldown", "sets": "3", "reps": "12-15", "rest": "45s", "note": "Isolates the lats without bicep involvement. Feel the pull in your back." }
+          ]
+        },
+        {
+          "name": "Biceps",
+          "tag": "3 exercises · 15 min",
+          "exercises": [
+            { "name": "Barbell Curl", "sets": "3", "reps": "8-10", "rest": "60s", "note": "Full supination at the top. Don't swing your body to lift." },
+            { "name": "Incline Dumbbell Curl", "sets": "3", "reps": "10-12", "rest": "45s", "note": "Full stretch at the bottom — great for bicep peak development." },
+            { "name": "Hammer Curl", "sets": "3", "reps": "12 each arm", "rest": "45s", "note": "Neutral grip builds the brachialis. Thickens the arm overall." }
+          ]
+        }
+      ],
+      "closingNote": "Big back, strong pull, healthy shoulders. Every rep today made you a better athlete."
+    },
+
+    {
+      "id": "wb-016",
+      "title": "Mobility & Recovery Session",
+      "type": "Mobility",
+      "equipment": "Bodyweight Only",
+      "level": "All Levels",
+      "goal": "Mobility & Injury Prevention",
+      "duration": 30,
+      "intensity": "Low",
+      "coachNote": "Recovery is training. The athletes who last longest are the ones who treat their body right. This session is just as important as any other.",
+      "sections": [
+        {
+          "name": "Breathing & Reset",
+          "tag": "5 min",
+          "exercises": [
+            { "name": "Box Breathing", "sets": "1", "reps": "5 cycles", "rest": "0", "note": "Inhale 4s, hold 4s, exhale 4s, hold 4s. Calm the nervous system." },
+            { "name": "Supine Spinal Twist", "sets": "1", "reps": "60s each side", "rest": "0", "note": "Knee crosses the body, arms spread wide, breathe into the rotation." }
+          ]
+        },
+        {
+          "name": "Lower Body Mobility",
+          "tag": "6 stretches · 15 min",
+          "exercises": [
+            { "name": "90/90 Hip Stretch", "sets": "2", "reps": "60s each side", "rest": "0", "note": "Sit tall, both legs at 90 degrees. Rotate through internal and external hip." },
+            { "name": "Pigeon Pose", "sets": "2", "reps": "60s each side", "rest": "0", "note": "Deepest hip flexor and glute release available. Breathe through the tension." },
+            { "name": "Standing Quad Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Squeeze the glute of the standing leg for balance and activation." },
+            { "name": "Seated Hamstring Stretch", "sets": "2", "reps": "45s each side", "rest": "0", "note": "Flex the foot, reach for the toes without rounding the back." },
+            { "name": "Calf Stretch (wall)", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Straight knee for upper calf, bent knee for soleus." },
+            { "name": "Hip Flexor Lunge Stretch", "sets": "2", "reps": "60s each side", "rest": "0", "note": "Sink the hips, reach the back arm overhead. Open the whole anterior chain." }
+          ]
+        },
+        {
+          "name": "Upper Body Mobility",
+          "tag": "4 stretches · 8 min",
+          "exercises": [
+            { "name": "Thread-the-Needle", "sets": "2", "reps": "45s each side", "rest": "0", "note": "Thoracic rotation opener. One arm sweeps under and through." },
+            { "name": "Doorway Chest Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Elbow at 90 degrees, open the pec and anterior shoulder." },
+            { "name": "Cross-Body Shoulder Stretch", "sets": "1", "reps": "45s each side", "rest": "0", "note": "Gentle rear delt and posterior shoulder release." },
+            { "name": "Neck Side Stretch", "sets": "1", "reps": "30s each side", "rest": "0", "note": "Ear drops toward shoulder. Never force. Always gentle." }
+          ]
+        }
+      ],
+      "closingNote": "Your body just got the maintenance it needed. Mobility work today means performance tomorrow."
+    }
+
+  ]
+}

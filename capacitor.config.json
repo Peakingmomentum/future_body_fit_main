@@ -1,0 +1,9 @@
+{
+  "appId": "app.lovable.5c6ef0f77885480a925f4e1a4c68a4d8",
+  "appName": "yourfuturebody",
+  "webDir": "dist",
+  "server": {
+    "url": "https://5c6ef0f7-7885-480a-925f-4e1a4c68a4d8.lovableproject.com?forceHideBadge=true",
+    "cleartext": true
+  }
+}

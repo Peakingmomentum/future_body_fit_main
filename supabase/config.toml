@@ -1,0 +1,67 @@
+project_id = "dsslamrdcmwrfgjgtqmw"
+
+[functions.generate-transformation]
+verify_jwt = false
+
+[functions.generate-clone-transformation]
+verify_jwt = false
+
+[functions.create-checkout]
+verify_jwt = false
+
+[functions.stripe-webhook]
+verify_jwt = false
+
+[functions.generate-workout]
+verify_jwt = false
+
+[functions.generate-meals]
+verify_jwt = false
+
+[functions.generate-pace-milestone]
+verify_jwt = false
+
+[functions.auto-generate-pace-milestones]
+verify_jwt = false
+
+[functions.generate-exercise-demo]
+verify_jwt = false
+
+[functions.generate-exercise-video]
+verify_jwt = false
+
+[functions.batch-generate-exercise-videos]
+verify_jwt = false
+
+[functions.upload-trainer-reference]
+verify_jwt = false
+
+[functions.fitness-buddy]
+verify_jwt = false
+
+[functions.swap-exercise]
+verify_jwt = false
+
+[functions.fetch-exercise-demos]
+verify_jwt = false
+
+[functions.list-exercisedb]
+verify_jwt = false
+
+[functions.sync-exercisedb]
+verify_jwt = false
+
+[functions.cache-exercise-gifs]
+verify_jwt = false
+
+[functions.generate-meals]
+verify_jwt = false
+
+[functions.exercise-image]
+verify_jwt = false
+
+[functions.revenuecat-webhook]
+verify_jwt = false
+
+[functions.link-missing-exercises]
+verify_jwt = false

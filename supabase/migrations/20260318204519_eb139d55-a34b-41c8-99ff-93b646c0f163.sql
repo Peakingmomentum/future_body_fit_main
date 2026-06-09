@@ -1,0 +1,1 @@
+UPDATE public.exercises SET external_video_url = NULL, video_source = 'none' WHERE external_video_url LIKE '%rapidapi-key%';
