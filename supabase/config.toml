@@ -54,9 +54,6 @@ verify_jwt = false
 [functions.cache-exercise-gifs]
 verify_jwt = false
 
-[functions.generate-meals]
-verify_jwt = false
-
 [functions.exercise-image]
 verify_jwt = false
 

@@ -12,10 +12,10 @@ serve(async (req) => {
 
   try {
     const { currentWeight, goalWeight, goalType, gender, beforePhotoUrl } = await req.json();
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
+    const AI_GATEWAY_API_KEY = Deno.env.get("AI_GATEWAY_API_KEY");
     
-    if (!LOVABLE_API_KEY) {
-      throw new Error("LOVABLE_API_KEY is not configured");
+    if (!AI_GATEWAY_API_KEY) {
+      throw new Error("AI_GATEWAY_API_KEY is not configured");
     }
 
     console.log("Clone transformation request:", {
@@ -108,14 +108,14 @@ serve(async (req) => {
 Keep the exact same pose, background, clothing, and camera angle. The image must remain in portrait/vertical orientation. Only change the body composition and musculature — everything else stays identical. This is for a professional fitness progress visualization.`;
 
       console.log("Generating body transformation from existing photo...");
-      response = await fetchWithRetry("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      response = await fetchWithRetry("https://ai-gateway.vercel.sh/v1/chat/completions", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${LOVABLE_API_KEY}`,
+          Authorization: `Bearer ${AI_GATEWAY_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-3.1-flash-image-preview",
+          model: "google/gemini-2.5-flash-image-preview",
           messages: [
             {
               role: "user",
@@ -133,14 +133,14 @@ Keep the exact same pose, background, clothing, and camera angle. The image must
       const prompt = `Professional fitness photography of ${physiqueDesc} Standing in a confident, neutral pose wearing athletic clothing. Studio lighting, clean background. Portrait orientation. High quality, photorealistic.`;
 
       console.log("Generating transformation from scratch...");
-      response = await fetchWithRetry("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      response = await fetchWithRetry("https://ai-gateway.vercel.sh/v1/chat/completions", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${LOVABLE_API_KEY}`,
+          Authorization: `Bearer ${AI_GATEWAY_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-3.1-flash-image-preview",
+          model: "google/gemini-2.5-flash-image-preview",
           messages: [{ role: "user", content: prompt }],
           modalities: ["image", "text"],
         }),
@@ -174,14 +174,14 @@ Keep the exact same pose, background, clothing, and camera angle. The image must
       
       const fallbackPrompt = `Professional fitness photo of ${physiqueDesc} Confident pose, athletic wear, studio lighting, clean background. Portrait orientation. Photorealistic.`;
       
-      const fallbackResponse = await fetchWithRetry("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      const fallbackResponse = await fetchWithRetry("https://ai-gateway.vercel.sh/v1/chat/completions", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${LOVABLE_API_KEY}`,
+          Authorization: `Bearer ${AI_GATEWAY_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model: "google/gemini-3.1-flash-image-preview",
+          model: "google/gemini-2.5-flash-image-preview",
           messages: [{ role: "user", content: fallbackPrompt }],
           modalities: ["image", "text"],
         }),

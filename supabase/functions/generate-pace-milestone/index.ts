@@ -33,9 +33,9 @@ serve(async (req) => {
       );
     }
 
-    const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
-    if (!LOVABLE_API_KEY) {
-      console.error('LOVABLE_API_KEY not configured');
+    const AI_GATEWAY_API_KEY = Deno.env.get('AI_GATEWAY_API_KEY');
+    if (!AI_GATEWAY_API_KEY) {
+      console.error('AI_GATEWAY_API_KEY not configured');
       return new Response(
         JSON.stringify({ error: 'AI service not configured' }),
         { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
@@ -99,14 +99,14 @@ Remember: PORTRAIT orientation (3:4 ratio, taller than wide), preserve identity,
 
     console.log('Sending request to AI gateway for milestone generation');
 
-    const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    const response = await fetch('https://ai-gateway.vercel.sh/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${LOVABLE_API_KEY}`,
+        'Authorization': `Bearer ${AI_GATEWAY_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-3.1-flash-image-preview',
+        model: 'google/gemini-2.5-flash-image-preview',
         messages: [
           {
             role: 'system',

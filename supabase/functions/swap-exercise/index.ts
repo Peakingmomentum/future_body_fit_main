@@ -12,10 +12,10 @@ serve(async (req) => {
 
   try {
     const { exerciseName, focusArea, equipment, currentExercises } = await req.json();
-    const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
+    const AI_GATEWAY_API_KEY = Deno.env.get('AI_GATEWAY_API_KEY');
     
-    if (!LOVABLE_API_KEY) {
-      throw new Error('LOVABLE_API_KEY is not configured');
+    if (!AI_GATEWAY_API_KEY) {
+      throw new Error('AI_GATEWAY_API_KEY is not configured');
     }
 
     const equipmentDescriptions: Record<string, string> = {
@@ -45,14 +45,14 @@ Return ONLY a JSON object:
   "tips": ["Form tip 1", "Form tip 2"]
 }`;
 
-    const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    const response = await fetch('https://ai-gateway.vercel.sh/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${LOVABLE_API_KEY}`,
+        'Authorization': `Bearer ${AI_GATEWAY_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-3-flash-preview',
+        model: 'google/gemini-2.5-flash',
         temperature: 1.0,
         messages: [
           { role: 'system', content: 'You are an expert fitness trainer. Return valid JSON only — no markdown, no explanations.' },

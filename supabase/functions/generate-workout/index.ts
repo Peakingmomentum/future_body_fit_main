@@ -13,11 +13,11 @@ serve(async (req) => {
 
   try {
     const { goalType, fitnessLevel, gender, focusArea, equipment } = await req.json();
-    const LOVABLE_API_KEY = Deno.env.get('LOVABLE_API_KEY');
+    const AI_GATEWAY_API_KEY = Deno.env.get('AI_GATEWAY_API_KEY');
     const SUPABASE_URL = Deno.env.get('SUPABASE_URL');
     const SUPABASE_ANON_KEY = Deno.env.get('SUPABASE_ANON_KEY');
 
-    if (!LOVABLE_API_KEY) throw new Error('LOVABLE_API_KEY is not configured');
+    if (!AI_GATEWAY_API_KEY) throw new Error('AI_GATEWAY_API_KEY is not configured');
     if (!SUPABASE_URL || !SUPABASE_ANON_KEY) throw new Error('Supabase env not configured');
 
     // Forward caller's JWT so RLS resolves their org via current_org_id().
@@ -116,14 +116,14 @@ Include 5-7 exercises. For each exercise, provide detailed descriptions, target 
 
     console.log('Generating workout for:', { goalType, fitnessLevel, focusArea, equipment, exercisePoolSize: filtered.length });
 
-    const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
+    const response = await fetch('https://ai-gateway.vercel.sh/v1/chat/completions', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${LOVABLE_API_KEY}`,
+        'Authorization': `Bearer ${AI_GATEWAY_API_KEY}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'google/gemini-3-flash-preview',
+        model: 'google/gemini-2.5-flash',
         temperature: 0.9,
         messages: [
           { 
