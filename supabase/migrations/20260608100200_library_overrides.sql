@@ -108,24 +108,7 @@ create policy "org staff writes custom exercises" on public.custom_exercises
     org_id in (select org_id from public.org_members where user_id = auth.uid())
   );
 
--- View for the effective workout library for the caller's org:
--- base workouts (from stock org) minus hidden, with replacements swapped in,
--- UNION the org's own custom workouts.
-create or replace view public.effective_workout_library as
-with caller_org as (select public.current_org_id() as org_id)
-select
-  coalesce(r.id, w.id) as id,
-  coalesce(r.title, w.plan_data->>'title') as title,
-  coalesce(r.plan_data, w.plan_data) as plan_data,
-  'base'::text as source,
-  (select org_id from caller_org) as org_id
-from public.workout_plans w
-left join public.library_overrides o
-  on o.base_workout_id = w.id and o.org_id = (select org_id from caller_org)
-left join public.workout_plans r on r.id = o.replacement_workout_id
-where w.org_id = '00000000-0000-0000-0000-00000000f17b'::uuid
-  and (o.id is null or o.action = 'replaced')
-union all
-select c.id, c.title, c.plan_data, 'custom'::text as source, c.org_id
-from public.custom_workouts c
-where c.org_id = (select org_id from caller_org) and c.is_published;
+-- NOTE: the effective library view is created in 20260608100600_exercise_overrides.sql
+-- (effective_exercise_library), which operates on the exercises pool. An earlier
+-- workout_plans-based view was removed here because workout_plans has no `title`
+-- column (title lives in plan_data JSONB) and the exercises-based view supersedes it.
