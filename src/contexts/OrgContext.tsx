@@ -81,8 +81,19 @@ export function OrgProvider({ children }: { children: ReactNode }) {
       }
     }
 
-    // 2) Unauthed: subdomain or build-time slug.
-    const slug = resolveSlugFromHost() ?? BUILD_ORG_SLUG ?? 'future-body'
+    // 2) Unauthed: ?org= query param (preview links) → persisted localStorage
+    //    override → subdomain → build-time slug → stock fallback.
+    let overrideSlug: string | null = null
+    if (typeof window !== 'undefined') {
+      const fromQuery = new URLSearchParams(window.location.search).get('org')
+      if (fromQuery) {
+        localStorage.setItem('fb_org_slug', fromQuery)
+        overrideSlug = fromQuery
+      } else {
+        overrideSlug = localStorage.getItem('fb_org_slug')
+      }
+    }
+    const slug = overrideSlug ?? resolveSlugFromHost() ?? BUILD_ORG_SLUG ?? 'future-body'
     const { data } = await supabase
       .from('organizations')
       .select('id, slug, name, branding, plan, is_stock')
