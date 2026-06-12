@@ -13,7 +13,7 @@ begin
 
   update public.profiles set org_id = stock_org where org_id is null;
   alter table public.profiles alter column org_id set not null;
-  alter table public.profiles alter column org_id set default stock_org;
+  alter table public.profiles alter column org_id set default '00000000-0000-0000-0000-00000000f17b'::uuid;
   create index if not exists profiles_org_idx on public.profiles(org_id);
 
   -- workout_plans
@@ -21,7 +21,7 @@ begin
     add column if not exists org_id uuid references public.organizations(id) on delete restrict;
   update public.workout_plans set org_id = stock_org where org_id is null;
   alter table public.workout_plans alter column org_id set not null;
-  alter table public.workout_plans alter column org_id set default stock_org;
+  alter table public.workout_plans alter column org_id set default '00000000-0000-0000-0000-00000000f17b'::uuid;
   create index if not exists workout_plans_org_idx on public.workout_plans(org_id);
 
   -- workout_logs
@@ -29,7 +29,7 @@ begin
     add column if not exists org_id uuid references public.organizations(id) on delete restrict;
   update public.workout_logs set org_id = stock_org where org_id is null;
   alter table public.workout_logs alter column org_id set not null;
-  alter table public.workout_logs alter column org_id set default stock_org;
+  alter table public.workout_logs alter column org_id set default '00000000-0000-0000-0000-00000000f17b'::uuid;
   create index if not exists workout_logs_org_idx on public.workout_logs(org_id);
 
   -- nutrition_logs
@@ -37,18 +37,34 @@ begin
     add column if not exists org_id uuid references public.organizations(id) on delete restrict;
   update public.nutrition_logs set org_id = stock_org where org_id is null;
   alter table public.nutrition_logs alter column org_id set not null;
-  alter table public.nutrition_logs alter column org_id set default stock_org;
+  alter table public.nutrition_logs alter column org_id set default '00000000-0000-0000-0000-00000000f17b'::uuid;
   create index if not exists nutrition_logs_org_idx on public.nutrition_logs(org_id);
 
-  -- fitness_buddy_messages
-  alter table public.fitness_buddy_messages
-    add column if not exists org_id uuid references public.organizations(id) on delete restrict;
-  update public.fitness_buddy_messages set org_id = stock_org where org_id is null;
-  alter table public.fitness_buddy_messages alter column org_id set not null;
-  alter table public.fitness_buddy_messages alter column org_id set default stock_org;
-  create index if not exists fitness_buddy_messages_org_idx on public.fitness_buddy_messages(org_id);
+  -- fitness_buddy_messages (guarded: this table was created ad-hoc in Lovable
+  -- and may not exist on a freshly-migrated project)
+  if to_regclass('public.fitness_buddy_messages') is not null then
+    alter table public.fitness_buddy_messages
+      add column if not exists org_id uuid references public.organizations(id) on delete restrict;
+    update public.fitness_buddy_messages set org_id = stock_org where org_id is null;
+    alter table public.fitness_buddy_messages alter column org_id set not null;
+    alter table public.fitness_buddy_messages alter column org_id set default '00000000-0000-0000-0000-00000000f17b'::uuid;
+    create index if not exists fitness_buddy_messages_org_idx on public.fitness_buddy_messages(org_id);
+  end if;
 end $$;
 
 -- Auto-assign org_id on new profile inserts from the user's invited org cookie
 -- handled in app layer / org-signup edge function; default keeps existing
 -- B2C signups under the stock org transparently.
+
+-- Helper: caller's org_id. Defined here (not in 100000) because a LANGUAGE sql
+-- function validates its column references at creation time, and profiles.org_id
+-- only exists after the ALTER above.
+create or replace function public.current_org_id()
+returns uuid
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select org_id from public.profiles where id = auth.uid()
+$$;

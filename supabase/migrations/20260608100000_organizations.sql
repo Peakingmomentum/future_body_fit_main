@@ -51,16 +51,9 @@ values (
 alter table public.organizations enable row level security;
 alter table public.org_members enable row level security;
 
--- Helper function: caller's org_id (derived in next migration via profiles.org_id)
-create or replace function public.current_org_id()
-returns uuid
-language sql
-stable
-security definer
-set search_path = public
-as $$
-  select org_id from public.profiles where id = auth.uid()
-$$;
+-- NOTE: current_org_id() is defined in 20260608100100_org_scoping.sql, AFTER
+-- profiles.org_id exists (a LANGUAGE sql function validates column references
+-- at creation time, so it cannot be created here before the column is added).
 
 -- RLS: anyone authenticated can read the stock org (for branding fallback);
 -- members can read their own org; only owners can update.
