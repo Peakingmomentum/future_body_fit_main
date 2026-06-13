@@ -4,6 +4,7 @@ import { useNavigate, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useAuth } from '@/contexts/AuthContext';
+import { useOrg } from '@/contexts/OrgContext';
 import { useProfile } from '@/hooks/useProfile';
 import { useWorkoutLogs } from '@/hooks/useWorkoutLogs';
 import { useNutritionLogs } from '@/hooks/useNutritionLogs';
@@ -35,6 +36,9 @@ import {
 export default function Dashboard() {
   const navigate = useNavigate();
   const { user, signOut, loading: authLoading } = useAuth();
+  const { org } = useOrg();
+  const appName = org?.branding?.app_name || 'Future Body Fit';
+  const phrases = org?.branding?.phrases ?? [];
   const { profile, isLoading: profileLoading } = useProfile();
   const { 
     logs,
@@ -88,7 +92,7 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Zap className="w-8 h-8 text-primary" />
-            <span className="text-xl font-display font-bold text-white">Future Body Fit</span>
+            <span className="text-xl font-display font-bold text-white">{appName}</span>
           </div>
           <div className="flex items-center gap-4">
             <PaceStatusBadge size="sm" />
@@ -117,6 +121,18 @@ export default function Dashboard() {
             </p>
             <ProfileSettingsDialog />
           </div>
+          {phrases.length > 0 && (
+            <div className="flex flex-wrap gap-2 mt-4">
+              {phrases.map((phrase, index) => (
+                <span
+                  key={index}
+                  className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20"
+                >
+                  {phrase}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Stats Grid */}

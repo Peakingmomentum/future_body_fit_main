@@ -21,14 +21,20 @@ serve(async (req) => {
   }
 
   try {
-    const { messages, personality = "balanced" } = await req.json();
+    const { messages, personality = "balanced", brandVoice } = await req.json();
     const AI_GATEWAY_API_KEY = Deno.env.get("AI_GATEWAY_API_KEY");
-    
+
     if (!AI_GATEWAY_API_KEY) {
       throw new Error("AI_GATEWAY_API_KEY is not configured");
     }
 
-    const systemPrompt = `${personalityPrompts[personality] || personalityPrompts.balanced}
+    // The org's brand voice, when set, defines the coach persona and takes
+    // precedence over the generic personality presets.
+    const persona = typeof brandVoice === "string" && brandVoice.trim().length > 0
+      ? brandVoice.trim()
+      : (personalityPrompts[personality] || personalityPrompts.balanced);
+
+    const systemPrompt = `${persona}
 
 You are an AI Fitness Buddy helping users with their fitness journey. You can:
 - Provide workout advice and exercise tips

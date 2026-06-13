@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { useOrg } from '@/contexts/OrgContext';
 import { 
   Zap, 
   Target, 
@@ -25,6 +26,12 @@ import heroTransformationHarold from '@/assets/hero-transformation-harold.jpg';
 import heroTransformationHaroldGoal from '@/assets/hero-transformation-harold-goal.jpg';
 
 export default function Landing() {
+  const { org } = useOrg();
+  const branding = org?.branding ?? {};
+  const appName = branding.app_name || 'Future Body Fit';
+  const logoUrl = branding.logo_url;
+  const tagline = branding.tagline;
+
   const features = [
     {
       icon: Camera,
@@ -82,8 +89,12 @@ export default function Landing() {
         
         <nav className="relative z-10 flex items-center justify-between p-6 max-w-7xl mx-auto">
           <div className="flex items-center gap-2">
-            <Zap className="w-8 h-8 text-primary" />
-            <span className="text-2xl font-display font-bold text-white">Future Body Fit</span>
+            {logoUrl ? (
+              <img src={logoUrl} alt={appName} className="w-8 h-8 object-contain" />
+            ) : (
+              <Zap className="w-8 h-8 text-primary" />
+            )}
+            <span className="text-2xl font-display font-bold text-white">{appName}</span>
           </div>
           <div className="flex items-center gap-4">
             <Link to="/auth">
@@ -109,8 +120,8 @@ export default function Landing() {
                 <br />Before You Build It
               </h1>
               <p className="text-lg text-white/70 mb-8 max-w-xl">
-                Upload a photo, set your goals, and watch AI reveal your transformation. 
-                Then let our smart workouts and nutrition tracking guide you there.
+                {tagline ||
+                  'Upload a photo, set your goals, and watch AI reveal your transformation. Then let our smart workouts and nutrition tracking guide you there.'}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/auth?mode=signup">
@@ -531,11 +542,15 @@ export default function Landing() {
       <footer className="border-t border-white/10 py-12 px-6 bg-background">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2">
-            <Zap className="w-6 h-6 text-primary" />
-            <span className="text-xl font-display font-bold text-white">Future Body Fit</span>
+            {logoUrl ? (
+              <img src={logoUrl} alt={appName} className="w-6 h-6 object-contain" />
+            ) : (
+              <Zap className="w-6 h-6 text-primary" />
+            )}
+            <span className="text-xl font-display font-bold text-white">{appName}</span>
           </div>
           <p className="text-white/50 text-sm">
-            © 2024 Future Body Fit. All rights reserved.
+            © 2024 {appName}. All rights reserved.
           </p>
         </div>
       </footer>

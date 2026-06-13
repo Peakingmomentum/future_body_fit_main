@@ -7,6 +7,9 @@ const STOCK_ORG_ID = '00000000-0000-0000-0000-00000000f17b'
 export interface OrgBranding {
   app_name?: string
   logo_url?: string
+  tagline?: string
+  brand_voice?: string
+  phrases?: string[]
   primary_hsl?: string
   accent_hsl?: string
   support_email?: string
@@ -69,13 +72,10 @@ export function OrgProvider({ children }: { children: ReactNode }) {
         .eq('id', user.id)
         .maybeSingle()
       const orgId = (profile as any)?.org_id ?? STOCK_ORG_ID
-      const { data } = await supabase
-        .from('organizations')
-        .select('id, slug, name, branding, plan, is_stock')
-        .eq('id', orgId)
-        .maybeSingle()
-      if (data) {
-        setOrg(data as unknown as Org)
+      const { data } = await (supabase as any).rpc('get_org_branding', { _id: orgId })
+      const orgRow = Array.isArray(data) ? data[0] : data
+      if (orgRow) {
+        setOrg(orgRow as unknown as Org)
         setLoading(false)
         return
       }
@@ -94,12 +94,9 @@ export function OrgProvider({ children }: { children: ReactNode }) {
       }
     }
     const slug = overrideSlug ?? resolveSlugFromHost() ?? BUILD_ORG_SLUG ?? 'future-body'
-    const { data } = await supabase
-      .from('organizations')
-      .select('id, slug, name, branding, plan, is_stock')
-      .eq('slug', slug)
-      .maybeSingle()
-    setOrg((data as unknown as Org) ?? null)
+    const { data } = await (supabase as any).rpc('get_org_branding', { _slug: slug })
+    const orgRow = Array.isArray(data) ? data[0] : data
+    setOrg((orgRow as unknown as Org) ?? null)
     setLoading(false)
   }
 

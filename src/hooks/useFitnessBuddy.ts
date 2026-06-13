@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
+import { useOrg } from '@/contexts/OrgContext';
 import { useToast } from '@/hooks/use-toast';
 
 export type Personality = 'calm' | 'motivational' | 'drill' | 'balanced';
@@ -17,6 +18,7 @@ const CHAT_URL = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/fitness-budd
 
 export function useFitnessBuddy() {
   const { user } = useAuth();
+  const { org } = useOrg();
   const { toast } = useToast();
   const [messages, setMessages] = useState<Message[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -134,7 +136,11 @@ export function useFitnessBuddy() {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY}`,
         },
-        body: JSON.stringify({ messages: allMessages, personality }),
+        body: JSON.stringify({
+          messages: allMessages,
+          personality,
+          brandVoice: org?.branding?.brand_voice,
+        }),
       });
 
       if (!response.ok || !response.body) {
@@ -191,7 +197,7 @@ export function useFitnessBuddy() {
     } finally {
       setIsLoading(false);
     }
-  }, [user, messages, personality, isLoading, toast]);
+  }, [user, org, messages, personality, isLoading, toast]);
 
   const clearHistory = useCallback(async () => {
     if (!user) return;
